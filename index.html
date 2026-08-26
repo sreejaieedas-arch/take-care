@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ff6f91">
+
+<title>For My Bhutu 💗</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Roboto, sans-serif;
+    background: #fff5f8;
+    color: #542536;
+    overflow-x: hidden;
+}
+
+/* ---------- BACKGROUND HEARTS ---------- */
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0;
+    animation: floatHeart 7s linear forwards;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) scale(.7) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: .6;
+    }
+
+    100% {
+        transform: translateY(-110vh) scale(1.3) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ---------- GENERAL ---------- */
+
+main,
+section,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    padding: 70px 18px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-family: Georgia, serif;
+    color: #a83258;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #8e6370;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* ---------- OPENING ---------- */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    background:
+        radial-gradient(circle at top left, #ffd9e4, transparent 40%),
+        radial-gradient(circle at bottom right, #ffe3ec, transparent 40%),
+        #fff5f8;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-heart {
+    font-size: 65px;
+    animation: heartbeat 1.5s infinite;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.16);
+    }
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    color: #b75c78;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    color: #9e3157;
+    font-size: clamp(45px, 13vw, 78px);
+    line-height: 1;
+    margin-bottom: 22px;
+}
+
+.hero-text {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.primary-btn {
+    display: inline-block;
+    border: none;
+    margin-top: 28px;
+    padding: 15px 27px;
+    border-radius: 50px;
+    background: #b83d65;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(184,61,101,.25);
+    transition: .25s;
+}
+
+.primary-btn:active {
+    transform: scale(.96);
+}
+
+/* ---------- CARDS ---------- */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.card {
+    background: rgba(255,255,255,.8);
+    padding: 24px;
+    border-radius: 23px;
+    box-shadow: 0 8px 25px rgba(100,30,50,.07);
+}
+
+.card-icon {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    color: #a83258;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ---------- CARE CHECKLIST ---------- */
+
+.checklist {
+    background: white;
+    border-radius: 24px;
+    padding: 12px 20px;
+    box-shadow: 0 8px 25px rgba(100,30,50,.07);
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 17px 2px;
+    border-bottom: 1px solid #f4dce3;
+    cursor: pointer;
+}
+
+.check-item:last-child {
+    border-bottom: none;
+}
+
+.check-item input {
+    width: 20px;
+    height: 20px;
+    accent-color: #b83d65;
+}
+
+.check-item.done span {
+    text-decoration: line-through;
+    opacity: .45;
+}
+
+/* ---------- NEED ME ---------- */
+
+.need-box {
+    background: linear-gradient(135deg, #b83d65, #8e294b);
+    color: white;
+    border-radius: 28px;
+    padding: 35px 20px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(130,30,60,.2);
+}
+
+.need-box h2 {
+    font-family: Georgia, serif;
+    font-size: 31px;
+    margin-bottom: 10px;
+}
+
+.need-box p {
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.need-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.need-btn {
+    border: 0;
+    border-radius: 18px;
+    padding: 14px 8px;
+    background: rgba(255,255,255,.18);
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.need-btn:active {
+    transform: scale(.96);
+}
+
+#needMessage {
+    margin-top: 22px;
+    min-height: 30px;
+    font-family: Georgia, serif;
+    font-size: 18px;
+}
+
+/* ---------- MOOD ---------- */
+
+.moods {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.mood {
+    border: 0;
+    background: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(100,30,50,.08);
+    transition: .2s;
+}
+
+.mood:active {
+    transform: scale(.9);
+}
+
+#moodMessage {
+    text-align: center;
+    margin-top: 22px;
+    color: #a83258;
+    font-family: Georgia, serif;
+    font-size: 19px;
+    min-height: 30px;
+}
+
+/* ---------- LOVE LETTER ---------- */
+
+.letter {
+    background: #fffdfd;
+    padding: 30px 24px;
+    border-radius: 6px;
+    box-shadow: 0 12px 35px rgba(90,30,50,.1);
+    line-height: 1.9;
+}
+
+.letter p {
+    margin-bottom: 16px;
+}
+
+.signature {
+    text-align: right;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    color: #a83258;
+    margin-top: 25px;
+}
+
+/* ---------- BAD DAY ---------- */
+
+.bad-day {
+    text-align: center;
+}
+
+.surprise {
+    margin-top: 25px;
+    display: none;
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(100,30,50,.08);
+}
+
+.surprise.show {
+    display: block;
+    animation: pop .4s ease;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.surprise-big {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.surprise h3 {
+    font-family: Georgia, serif;
+    color: #a83258;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.surprise p {
+    line-height: 1.8;
+}
+
+/* ---------- FINAL ---------- */
+
+.final {
+    text-align: center;
+}
+
+.final-box {
+    background: linear-gradient(135deg, #ff7c9e, #b83259);
+    color: white;
+    border-radius: 30px;
+    padding: 45px 22px;
+    box-shadow: 0 15px 40px rgba(150,40,80,.2);
+}
+
+.final-box h2 {
+    font-family: Georgia, serif;
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.final-box p {
+    line-height: 1.9;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    text-align: center;
+    padding: 45px 20px;
+    color: #8e6370;
+    line-height: 1.8;
+}
+
+.footer-heart {
+    font-size: 35px;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 55px 15px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 29px;
+    }
+
+    .need-buttons {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .letter {
+        padding: 26px 20px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- ================= HERO ================= -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-heart">💗</div>
+
+        <div class="eyebrow">
+            A little something from someone who loves you
+        </div>
+
+        <h1>Hey Bhutu...</h1>
+
+        <p class="hero-text">
+            I know some days are harder than others.
+            <br>
+            So I made you a tiny corner of the internet
+            where you can come whenever you need a little
+            extra love.
+        </p>
+
+        <a href="#care" class="primary-btn">
+            Open Your Care Package 💕
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<!-- ================= CARE ================= -->
+
+<section id="care">
+
+    <h2 class="section-title">
+        Take Care of Yourself 🌸
+    </h2>
+
+    <p class="section-subtitle">
+        Your body is doing a lot right now.
+        Be gentle with yourself.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-icon">💧</div>
+            <h3>Drink Water</h3>
+            <p>
+                Keep yourself hydrated throughout the day.
+                Tiny sips count too.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🔥</div>
+            <h3>Stay Warm</h3>
+            <p>
+                A warm water bottle or heating pad can be
+                comforting when cramps are bothering you.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🛌</div>
+            <h3>Rest</h3>
+            <p>
+                You don't have to be productive every second.
+                Give yourself permission to rest.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🍫</div>
+            <h3>Eat Something Nice</h3>
+            <p>
+                Have something you enjoy and something
+                nourishing when you can.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CHECKLIST ================= -->
+
+<section>
+
+    <h2 class="section-title">
+        Your Little Checklist 🫶
+    </h2>
+
+    <p class="section-subtitle">
+        Because apparently I can't personally remind you
+        every five minutes. 😭
+    </p>
+
+    <div class="checklist">
+
+        <label class="check-item">
+            <input type="checkbox">
+            <span>I drank some water 💧</span>
+        </label>
+
+        <label class="check-item">
+            <input type="checkbox">
+            <span>I ate something 🍓</span>
+        </label>
+
+        <label class="check-item">
+            <input type="checkbox">
+            <span>I rested for a while 🛌</span>
+        </label>
+
+        <label class="check-item">
+            <input type="checkbox">
+            <span>I got comfortable 🔥</span>
+        </label>
+
+        <label class="check-item">
+            <input type="checkbox">
+            <span>I did something that made me happy 🌷</span>
+        </label>
+
+        <label class="check-item">
+            <input type="checkbox">
+            <span>I remembered that I am loved 💗</span>
+        </label>
+
+    </div>
+
+</section>
+
+
+<!-- ================= NEED ME ================= -->
+
+<section>
+
+    <div class="need-box">
+
+        <h2>Need Me? 🫂</h2>
+
+        <p>
+            You don't even have to explain.
+            Just press one.
+        </p>
+
+        <div class="need-buttons">
+
+            <button class="need-btn"
+            onclick="needMe('hug')">
+                🫂 I Need a Hug
+            </button>
+
+            <button class="need-btn"
+            onclick="needMe('food')">
+                🍜 I Need Food
+            </button>
+
+            <button class="need-btn"
+            onclick="needMe('talk')">
+                💬 I Need to Talk
+            </button>
+
+            <button class="need-btn"
+            onclick="needMe('alone')">
+                🧸 Leave Me Alone
+            </button>
+
+        </div>
+
+        <div id="needMessage"></div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MOOD ================= -->
+
+<section>
+
+    <h2 class="section-title">
+        Today's Mood 🌙
+    </h2>
+
+    <p class="section-subtitle">
+        Pick whichever feels closest.
+    </p>
+
+    <div class="moods">
+
+        <button class="mood" onclick="mood('🥰')">🥰</button>
+        <button class="mood" onclick="mood('😊')">😊</button>
+        <button class="mood" onclick="mood('😐')">😐</button>
+        <button class="mood" onclick="mood('🥺')">🥺</button>
+        <button class="mood" onclick="mood('😭')">😭</button>
+        <button class="mood" onclick="mood('😡')">😡</button>
+        <button class="mood" onclick="mood('😴')">😴</button>
+
+    </div>
+
+    <div id="moodMessage"></div>
+
+</section>
+
+
+<!-- ================= LOVE LETTER ================= -->
+
+<section>
+
+    <h2 class="section-title">
+        A Little Letter 💌
+    </h2>
+
+    <div class="letter">
+
+        <p>
+            My Bhutu,
+        </p>
+
+        <p>
+            I know periods can make some days uncomfortable,
+            exhausting and sometimes just plain annoying.
+        </p>
+
+        <p>
+            I wish I could take all the pain away from you.
+            Since I can't, I'll just make sure you never have
+            to feel like you're dealing with everything alone.
+        </p>
+
+        <p>
+            You don't have to pretend to be okay around me.
+        </p>
+
+        <p>
+            If you're happy, I'll be happy with you.
+            If you're angry, I'll listen.
+            If you're sad, I'll stay.
+            If you want food, I'll find food.
+            And if you just want to sleep...
+            I'll let my sleepyhead sleep. 🥺
+        </p>
+
+        <p>
+            You never have to apologise for your feelings.
+        </p>
+
+        <p>
+            On the difficult days,
+            please remember that you are still the same
+            beautiful person I fell in love with.
+        </p>
+
+        <p>
+            And yes...
+            <strong>
+                I still love you even when you're angry at me
+                for absolutely no reason. 😭❤️
+            </strong>
+        </p>
+
+        <div class="signature">
+            Always yours,<br>
+            Your idiot ❤️
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BAD DAY ================= -->
+
+<section class="bad-day">
+
+    <h2 class="section-title">
+        Having a Really Bad Day? 🥺
+    </h2>
+
+    <p class="section-subtitle">
+        Okay. Then you need this.
+    </p>
+
+    <button class="primary-btn"
+    onclick="showSurprise()">
+        Open This 💗
+    </button>
+
+    <div class="surprise" id="surprise">
+
+        <div class="surprise-big">
+            🫂
+        </div>
+
+        <h3>Come here.</h3>
+
+        <p>
+            Forget everything for a moment.
+        </p>
+
+        <p>
+            Take a deep breath.
+            <br>
+            Get comfortable.
+            <br>
+            Drink some water.
+            <br>
+            Put your phone down for a little while if you need to.
+        </p>
+
+        <p style="margin-top:15px;">
+            And remember:
+        </p>
+
+        <p>
+            <strong>
+                This bad moment will pass.
+                You don't have to handle it perfectly.
+                You just have to get through it.
+            </strong>
+        </p>
+
+        <p style="margin-top:15px;">
+            And somewhere out there,
+            there's someone who loves you very,
+            very much. ❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROMISES ================= -->
+
+<section>
+
+    <div class="need-box">
+
+        <h2>My Period-Day Promises ❤️</h2>
+
+        <p>
+            I will listen.
+            <br>
+            I will be patient.
+            <br>
+            I will bring food.
+            <br>
+            I will give hugs.
+            <br>
+            I will let you complain.
+            <br>
+            I will remind you to rest.
+            <br>
+            I will never make you feel bad for feeling bad.
+            <br><br>
+
+            And most importantly...
+            <br><br>
+
+            <strong>
+                I will be here.
+            </strong>
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FINAL ================= -->
+
+<section class="final">
+
+    <div class="final-box">
+
+        <h2>You Are Loved. 🌷</h2>
+
+        <p>
+            On your happy days.
+            <br>
+            On your sad days.
+            <br>
+            On your angry days.
+            <br>
+            On your sleepy days.
+            <br>
+            On your period days.
+            <br><br>
+
+            On every single day...
+            <br><br>
+
+            <strong>
+                you are my favourite person.
+            </strong>
+        </p>
+
+        <p style="margin-top:25px; font-size:25px;">
+            ❤️
+        </p>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-heart">
+        💗
+    </div>
+
+    Made with love, exclusively for Bhutu.
+
+    <br>
+
+    <small>
+        No matter what kind of day you're having,
+        you are never alone.
+    </small>
+
+</footer>
+
+
+<script>
+
+/* ================= CHECKLIST ================= */
+
+const checks =
+    document.querySelectorAll(".check-item input");
+
+checks.forEach((checkbox, index) => {
+
+    const saved =
+        localStorage.getItem("bhutuCheck" + index);
+
+    if (saved === "true") {
+
+        checkbox.checked = true;
+
+        checkbox.parentElement.classList.add("done");
+    }
+
+    checkbox.addEventListener("change", function() {
+
+        localStorage.setItem(
+            "bhutuCheck" + index,
+            this.checked
+        );
+
+        this.parentElement.classList.toggle(
+            "done",
+            this.checked
+        );
+
+    });
+
+});
+
+
+/* ================= NEED ME ================= */
+
+function needMe(type) {
+
+    const message =
+        document.getElementById("needMessage");
+
+    const messages = {
+
+        hug:
+        "Come here. 🫂 Consider yourself officially hugged for the next 10 minutes. ❤️",
+
+        food:
+        "Okay food emergency detected. 🍜🍫 Go get something yummy, baby.",
+
+        talk:
+        "I'm listening. You don't have to make sense. Just say whatever is on your mind. ❤️",
+
+        alone:
+        "Okay, baby. I'll give you your space. But I'm still only one call away. 🧸❤️"
+
+    };
+
+    message.innerHTML = messages[type];
+
+}
+
+
+/* ================= MOOD ================= */
+
+function mood(value) {
+
+    const message =
+        document.getElementById("moodMessage");
+
+    const messages = {
+
+        "🥰":
+        "Awww. Someone is feeling cute today. 💗",
+
+        "😊":
+        "I'm glad you're feeling okay today. 🌷",
+
+        "😐":
+        "It's okay to simply exist today. No pressure. 🫶",
+
+        "🥺":
+        "Come here, baby. Biggest virtual hug incoming. 🫂",
+
+        "😭":
+        "No crying alone. I'm here. ❤️",
+
+        "😡":
+        "Okay okay... I shall behave today. 😭❤️",
+
+        "😴":
+        "Sleepyhead detected. Go rest. 💤💗"
+
+    };
+
+    message.innerHTML = messages[value];
+
+    localStorage.setItem("bhutuMood", value);
+
+}
+
+
+/* ================= BAD DAY SURPRISE ================= */
+
+function showSurprise() {
+
+    const surprise =
+        document.getElementById("surprise");
+
+    surprise.classList.toggle("show");
+
+}
+
+
+/* ================= FLOATING HEARTS ================= */
+
+function createHeart() {
+
+    const heart =
+        document.createElement("div");
+
+    heart.className = "heart";
+
+    heart.innerHTML =
+        Math.random() > .5 ? "♥" : "♡";
+
+    heart.style.left =
+        Math.random() * 100 + "%";
+
+    heart.style.fontSize =
+        (14 + Math.random() * 18) + "px";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
+
+    heart.style.color =
+        "#e98ba5";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 10000);
+
+}
+
+setInterval(createHeart, 1500);
+
+
+/* ================= WELCOME ================= */
+
+window.addEventListener("load", () => {
+
+    const savedMood =
+        localStorage.getItem("bhutuMood");
+
+    if (savedMood) {
+
+        document.getElementById("moodMessage").innerHTML =
+            "Your last selected mood: " + savedMood;
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
